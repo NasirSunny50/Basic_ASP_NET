@@ -11,27 +11,31 @@ namespace HelloWorldWebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+                    
         }
 
         protected void button_add_Click(object sender, EventArgs e)
         {
-
+            Double result = Double.Parse(textBox_firstNumber.Text) + Double.Parse(textBox_secondNumber.Text);
+            label_result.Text = result.ToString();
         }
 
-        protected void button_sub_Click(object sender, EventArgs e)
+        protected void button_sub_Click1(object sender, EventArgs e)
         {
-
+            Double result = Double.Parse(textBox_firstNumber.Text) - Double.Parse(textBox_secondNumber.Text);
+            label_result.Text = result.ToString();
         }
 
-        protected void button_mul_Click(object sender, EventArgs e)
+        protected void button_mul_Click1(object sender, EventArgs e)
         {
-
+            Double result = Double.Parse(textBox_firstNumber.Text) * Double.Parse(textBox_secondNumber.Text);
+            label_result.Text = result.ToString();
         }
 
-        protected void button_div_Click(object sender, EventArgs e)
+        protected void button_div_Click1(object sender, EventArgs e)
         {
-
+            Double result = Double.Parse(textBox_firstNumber.Text) / Double.Parse(textBox_secondNumber.Text);
+            label_result.Text = result.ToString();
         }
     }
 }

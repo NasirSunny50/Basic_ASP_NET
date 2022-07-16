@@ -48,11 +48,11 @@
                     <td>
                         <asp:Button ID="button_add" runat="server" Text="ADD" OnClick="button_add_Click" />
                  
-                        <asp:Button ID="button_sub" runat="server" Text="SUB" />
+                        <asp:Button ID="button_sub" runat="server" Text="SUB" OnClick="button_sub_Click1" />
                  
-                        <asp:Button ID="button_mul" runat="server" Text="MUL" />
+                        <asp:Button ID="button_mul" runat="server" Text="MUL" OnClick="button_mul_Click1" />
                  
-                        <asp:Button ID="button_div" runat="server" Text="DIV" />
+                        <asp:Button ID="button_div" runat="server" Text="DIV" OnClick="button_div_Click1" />
                      </td>
                 </tr>
             </table>

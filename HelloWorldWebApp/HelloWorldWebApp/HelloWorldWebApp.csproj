@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="CalculatorUI.aspx" />
     <Content Include="HelloWorldUI.aspx" />
+    <Content Include="StudentEntryUI.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +88,13 @@
       <DependentUpon>HelloWorldUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentEntryUI.aspx.cs">
+      <DependentUpon>StudentEntryUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentEntryUI.aspx.designer.cs">
+      <DependentUpon>StudentEntryUI.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
