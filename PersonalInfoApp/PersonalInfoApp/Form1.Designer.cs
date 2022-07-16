@@ -72,7 +72,7 @@ namespace PersonalInfoApp
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(256, 253);
+            this.BtnSave.Location = new System.Drawing.Point(263, 253);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 4;
