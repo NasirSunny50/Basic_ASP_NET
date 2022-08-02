@@ -14,18 +14,28 @@ namespace UserDefinedTypeApp
 
         }
 
-        Employee employee = null;
+        private List<Employee> employees = new List<Employee>();
 
         protected void Button_save_Click(object sender, EventArgs e)
         {
-            employee = new Employee();
+
+            //single employee receive from form
+
+            Employee employee = new Employee();
 
             employee.id = Convert.ToInt32(TextBox_id.Text);
             employee.name = TextBox_name.Text;
             employee.email = TextBox_email.Text;
 
-            ViewState["Employee"] = employee;
 
+            //employee add to list
+            employees.Add(employee);
+
+
+            //add to ViewState
+            ViewState["Employees"] = employees;
+
+            
             TextBox_id.Text = "";
             TextBox_name.Text = "";
             TextBox_email.Text = "";
@@ -34,11 +44,30 @@ namespace UserDefinedTypeApp
 
         protected void Button_retrive_Click(object sender, EventArgs e)
         {
-            employee = (Employee)ViewState["Employee"];
+            //get the kist from viewstate
+            employees = (List<Employee>)ViewState["Employees"];
 
-            TextBox_id.Text = employee.id.ToString();
-            TextBox_name.Text = employee.name;
-            TextBox_email.Text = employee.email;
+
+            //check if employee is found by id
+            int inputID = Convert.ToInt32(TextBox_id.Text);
+
+            Employee retrieveEmployee = null;
+
+            foreach(Employee employee in employees)
+            {
+                if(employee.id == inputID)
+                {
+
+                }
+
+            }
+
+            //if found show information
+
+
+            TextBox_id.Text = employees.id.ToString();
+            TextBox_name.Text = employees.name;
+            TextBox_email.Text = employees.email;
 
         }
     }
