@@ -24,6 +24,8 @@ namespace UserDefinedTypeApp
             employee.name = TextBox_name.Text;
             employee.email = TextBox_email.Text;
 
+            ViewState["Employee"] = employee;
+
             TextBox_id.Text = "";
             TextBox_name.Text = "";
             TextBox_email.Text = "";
@@ -32,6 +34,11 @@ namespace UserDefinedTypeApp
 
         protected void Button_retrive_Click(object sender, EventArgs e)
         {
+            employee = (Employee)ViewState["Employee"];
+
+            TextBox_id.Text = employee.id.ToString();
+            TextBox_name.Text = employee.name;
+            TextBox_email.Text = employee.email;
 
         }
     }
