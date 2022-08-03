@@ -27,9 +27,10 @@
                 </tr>
 
                 <tr>
-                    <td></td>
+                    <td>&nbsp;</td>
                     <td><asp:Button ID="Button_save" runat="server" Text="SAVE" OnClick="Button_save_Click" style="height: 26px" />
                         <asp:Button ID="Button_retrive" runat="server" Text="RETRIVE" OnClick="Button_retrive_Click" />
+                        <asp:Button ID="Button_clear" runat="server" Text="CLEAR" OnClick="Button_clear_Click" />
                     </td>
                                           
                 </tr>

@@ -18,15 +18,16 @@ namespace UserDefinedTypeApp
 
         protected void Button_save_Click(object sender, EventArgs e)
         {
+            if (ViewState["Employees"] != null)
+            {
+                employees = (List<Employee>)ViewState["Employees"];
+            }
 
             //single employee receive from form
-
             Employee employee = new Employee();
-
             employee.id = Convert.ToInt32(TextBox_id.Text);
             employee.name = TextBox_name.Text;
             employee.email = TextBox_email.Text;
-
 
             //employee add to list
             employees.Add(employee);
@@ -34,8 +35,6 @@ namespace UserDefinedTypeApp
 
             //add to ViewState
             ViewState["Employees"] = employees;
-
-            
             TextBox_id.Text = "";
             TextBox_name.Text = "";
             TextBox_email.Text = "";
@@ -57,18 +56,27 @@ namespace UserDefinedTypeApp
             {
                 if(employee.id == inputID)
                 {
-
+                    retrieveEmployee = employee;
+                    break;
                 }
 
             }
 
             //if found show information
 
+            if(retrieveEmployee != null)
+            {
+                TextBox_name.Text = retrieveEmployee.name;
+                TextBox_email.Text = retrieveEmployee.email;
+            }
 
-            TextBox_id.Text = employees.id.ToString();
-            TextBox_name.Text = employees.name;
-            TextBox_email.Text = employees.email;
+        }
 
+        protected void Button_clear_Click(object sender, EventArgs e)
+        {
+            TextBox_id.Text = "";
+            TextBox_name.Text = "";
+            TextBox_email.Text = "";
         }
     }
 }
